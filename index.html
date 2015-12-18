@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular2 Radio Button Example</title>
+
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+
+    <style>
+        body{
+            margin: 0;
+        }
+        .window{
+            position: relative;
+            color:#ffffff;
+            display:block;
+            background:#3C3F41;
+            border:1px solid #555555;
+            padding: 5px;
+        }
+    </style>
+
+    <script>
+        System.config({
+            packages: {
+                "modules/ng-school": {
+                    format: 'register',
+                    defaultExtension: 'js'
+                }
+            }
+        });
+        System.import('modules/ng-school/display/FluidWindowExample')
+                .then(null, console.error.bind(console));
+    </script>
+
+</head>
+<body>
+<fluid-window-app></fluid-window-app>
+</body>
+</html>
